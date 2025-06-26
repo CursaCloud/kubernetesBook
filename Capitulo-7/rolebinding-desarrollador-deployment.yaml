@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: desarrollador-deployment-binding
+  namespace: desarrollo
+subjects:
+  - kind: User
+    name: usuario-desarrollador
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: desarrollador-deployment
+  apiGroup: rbac.authorization.k8s.io

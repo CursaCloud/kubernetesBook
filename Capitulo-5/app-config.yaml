@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: default
+data:
+  app.name: "MiAplicacion"
+  app.version: "1.0.0"
+  db.host: "localhost"
+  db.port: "5432"

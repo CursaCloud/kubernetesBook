@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-a
+  labels:
+    app: pod-a
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: minikube # Cambia esto si usas otro nodo
+  containers:
+  - name: webserver
+    image: nginx
+    ports:
+    - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-b
+  labels:
+    app: pod-b
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: minikube # Cambia esto si usas otro nodo
+  containers:
+  - name: webserver
+    image: nginx
+    ports:
+    - containerPort: 8080

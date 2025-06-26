@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mi-primer-pod
+spec:
+  containers:
+  - name: contenedor-ejemplo
+    image: nginx:latest
+    resources:
+      limits:
+        cpu: "1"
+        memory: "512Mi"
+    ports:
+    - containerPort: 80
+
+
+
